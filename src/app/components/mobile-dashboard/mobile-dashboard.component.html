@@ -32,8 +32,8 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
-            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
-            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <td colspan="2" >{{datum.name | uppercase}}<br>Vol(24Hrs): {{datum.volume | number:'.2'}}</td>
+            <td>{{datum.price | number:'.2'}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
             <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
             <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
             <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
@@ -52,12 +52,12 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
-            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
-            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <td colspan="2" >{{datum.name | uppercase}}<br>Vol(24Hrs): {{datum.volume | number:'.2'}}</td>
+            <td>{{datum.price | number:'.2'}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
             <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
             <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
             <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
-          </tr>
+            </tr>
         </tbody>
       </table>
     </div>
@@ -72,12 +72,12 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
-            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
-            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <td colspan="2" >{{datum.name | uppercase}}<br>Vol(24Hrs): {{datum.volume | number:'.2'}}</td>
+            <td>{{datum.price | number:'.2'}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
             <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
             <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
             <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
-          </tr>
+            </tr>
         </tbody>
       </table>
     </div>
@@ -92,12 +92,12 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
-            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
-            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <td colspan="2" >{{datum.name | uppercase}}<br>Vol(24Hrs): {{datum.volume | number:'.2'}}</td>
+            <td>{{datum.price | number:'.2'}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
             <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
             <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
             <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
-          </tr>
+            </tr>
         </tbody>
       </table>
     </div>

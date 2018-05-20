@@ -43,8 +43,8 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td colspan="3">
-              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
-            <td>{{datum.price | number}}</td>
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name | uppercase}}</td>
+            <td>{{datum.price | number:'.2'}}</td>
             <td>{{datum.ask | number:'.2'}}</td>
             <td>{{datum.bid}}</td>
             <td *ngIf="datum.change > 0" class="green">{{datum.change}}%</td>
@@ -78,11 +78,13 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td colspan="3">
-              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
-            <td>{{datum.price}}</td>
-            <td>{{datum.ask}}</td>
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name | uppercase}}</td>
+            <td>{{datum.price | number:'.2'}}</td>
+            <td>{{datum.ask | number:'.2'}}</td>
             <td>{{datum.bid}}</td>
-            <td>{{datum.change}}%</td>
+            <td *ngIf="datum.change > 0" class="green">{{datum.change}}%</td>
+            <td *ngIf="datum.change < 0" class="red">{{datum.change}}%</td>
+            <td *ngIf="datum.change == 0">{{datum.change}}%</td>
             <td>{{datum.volume}}</td>
           </tr>
         </tbody>
@@ -109,13 +111,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let datum of data">
+          <<tr *ngFor="let datum of data">
             <td colspan="3">
-              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
-            <td>{{datum.price}}</td>
-            <td>{{datum.ask}}</td>
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name | uppercase}}</td>
+            <td>{{datum.price | number:'.2'}}</td>
+            <td>{{datum.ask | number:'.2'}}</td>
             <td>{{datum.bid}}</td>
-            <td>{{datum.change}}%</td>
+            <td *ngIf="datum.change > 0" class="green">{{datum.change}}%</td>
+            <td *ngIf="datum.change < 0" class="red">{{datum.change}}%</td>
+            <td *ngIf="datum.change == 0">{{datum.change}}%</td>
             <td>{{datum.volume}}</td>
           </tr>
         </tbody>
@@ -144,11 +148,13 @@
         <tbody>
           <tr *ngFor="let datum of data">
             <td colspan="3">
-              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
-            <td>{{datum.price}}</td>
-            <td>{{datum.ask}}</td>
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name | uppercase}}</td>
+            <td>{{datum.price | number:'.2'}}</td>
+            <td>{{datum.ask | number:'.2'}}</td>
             <td>{{datum.bid}}</td>
-            <td>{{datum.change}}%</td>
+            <td *ngIf="datum.change > 0" class="green">{{datum.change}}%</td>
+            <td *ngIf="datum.change < 0" class="red">{{datum.change}}%</td>
+            <td *ngIf="datum.change == 0">{{datum.change}}%</td>
             <td>{{datum.volume}}</td>
           </tr>
         </tbody>
