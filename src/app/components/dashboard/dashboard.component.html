@@ -1,0 +1,158 @@
+<div class="view">
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+      <a href="#inr" data-toggle='tab'>INR</a>
+    </li>
+    <li role="presentation">
+      <a href="#btc" data-toggle='tab'>BTC</a>
+    </li>
+    <li role="presentation">
+      <a href="#eth" data-toggle='tab'>ETH</a>
+    </li>
+    <li role="presentation">
+      <a href="#xrp" data-toggle='tab'>XRP</a>
+    </li>
+    <li class="right">
+      <div class="form-group has-feedback" align="right">
+        <label class="sr-only">Search</label>
+        <input type="text" class="form-control" placeholder="Search Koin" />
+        <i class="glyphicon glyphicon-search form-control-feedback"></i>
+      </div>
+    </li>
+  </ul>
+  <div class="tab-content ">
+    <div id="inr" class="tab-pane fade in active table-responsive">
+      <table class="table table-bordered" >
+        <thead>
+          <tr>
+            <th colspan="3">Assets<span class="caret"></span>
+            </th>
+            <th>LAST PRICE
+              <br> (INR)</th>
+            <th>LOWEST ASK
+              <br> (INR)</th>
+            <th>HIGHEST BID
+              <br> (INR)</th>
+            <th>CHANGE
+              <br> (24 H)</th>
+            <th>VOLUME
+              <br> (24 H)</th>
+            <!-- <th >Assets</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td colspan="3">
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
+            <td>{{datum.price | number}}</td>
+            <td>{{datum.ask | number:'.2'}}</td>
+            <td>{{datum.bid}}</td>
+            <td *ngIf="datum.change > 0" class="green">{{datum.change}}%</td>
+            <td *ngIf="datum.change < 0" class="red">{{datum.change}}%</td>
+            <td *ngIf="datum.change == 0">{{datum.change}}%</td>
+            <td>{{datum.volume}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="btc" class="tab-pane fade table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="3">Assets
+              <span class="caret"></span>
+            </th>
+            <th>LAST PRICE
+              <br> (BTC)</th>
+            <th>LOWEST ASK
+              <br> (BTC)</th>
+            <th>HIGHEST BID
+              <br> (BTC)</th>
+            <th>CHANGE
+              <br> (24 H)</th>
+            <th>VOLUME
+              <br> (24 H)</th>
+            <!-- <th >Assets</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td colspan="3">
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
+            <td>{{datum.price}}</td>
+            <td>{{datum.ask}}</td>
+            <td>{{datum.bid}}</td>
+            <td>{{datum.change}}%</td>
+            <td>{{datum.volume}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="eth" class="tab-pane fade table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="3">Assets
+              <span class="caret"></span>
+            </th>
+            <th>LAST PRICE
+              <br> (ETH)</th>
+            <th>LOWEST ASK
+              <br> (ETH)</th>
+            <th>HIGHEST BID
+              <br> (ETH)</th>
+            <th>CHANGE
+              <br> (24 H)</th>
+            <th>VOLUME
+              <br> (24 H)</th>
+            <!-- <th >Assets</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td colspan="3">
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
+            <td>{{datum.price}}</td>
+            <td>{{datum.ask}}</td>
+            <td>{{datum.bid}}</td>
+            <td>{{datum.change}}%</td>
+            <td>{{datum.volume}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="xrp" class="tab-pane fade table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="3">Assets
+              <span class="caret"></span>
+            </th>
+            <th>LAST PRICE
+              <br> (XRP)</th>
+            <th>LOWEST ASK
+              <br> (XRP)</th>
+            <th>HIGHEST BID
+              <br> (XRP)</th>
+            <th>CHANGE
+              <br> (24 H)</th>
+            <th>VOLUME
+              <br> (24 H)</th>
+            <!-- <th >Assets</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td colspan="3">
+              <img src="{{datum.img}}" alt="" height="20" width="20"> {{datum.name}}</td>
+            <td>{{datum.price}}</td>
+            <td>{{datum.ask}}</td>
+            <td>{{datum.bid}}</td>
+            <td>{{datum.change}}%</td>
+            <td>{{datum.volume}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

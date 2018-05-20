@@ -1,0 +1,56 @@
+<div class="featured">
+  <div class="featured-heading">
+   <h5 style="font-weight: bolder;">FEATURED IN</h5>
+  </div>
+  <div class="featured-content">
+    <marquee behavior="slide" direction="left" loop="1">
+      <img src="https://www.avis.co.in/blog/wp-content/uploads/2017/12/ani.png" width="120" height="80" alt="ANI" />
+      <img src="https://www.livemint.com/rw/PortalConfig/LiveMint/static_content/images/logo/livemint.jpg" width="120" height="80" />
+      <img src="https://2.bp.blogspot.com/-SlLHH4ZoDf4/WdpQnbgcPDI/AAAAAAAAApo/TELAsNpBHrUFrfDLBUbpfERvFlwduVn-gCLcBGAs/s1600/TheHindu-Logo.png" width="120" height="80" alt="The Hindu" />
+      <img src="http://www.solutionsandco.org/wp-content/uploads/2015/10/hindu-business-line.png" width="120" height="80"  />
+      <img src="http://www.televisionpost.com/wp-content/uploads/2018/03/The-Quint.png" width="120" height="80"  />
+    </marquee>
+  </div>
+</div>
+<div class="announcement">
+  <div class="featured-heading">
+    <h5 style="font-weight: bolder;">ANNOUNCEMENTS</h5>
+  </div>
+  <div class="announcement-content">
+    <div *ngFor="let datum of data">
+      <h1>{{datum.title}}</h1>
+      <p>{{datum.content}}</p>
+      <p>{{datum.date}}</p>
+      <hr>
+    </div>
+  </div>
+</div>
+<div class="investor">
+  <div class="featured-heading">
+    <h5 style="font-weight: bolder;">OUR INVESTORS</h5>
+  </div>
+  <div class="investor-content">
+    <img src="http://www.beenext.com/wp-content/uploads/2015/04/beenext_logo_bold_resized-1.png" alt="">
+    <img src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/306015-3f036f778788ef2014c50ddd1247d46a-medium_jpg.jpg?buster=1401001645" alt="">
+  </div>
+</div>
+<div class="tweets">
+  <div class="tweet-container" *ngFor="let tweet of tweets">
+    <h1>Tweets <sub style="color:gray">by</sub><sub style="color: #0c6eb5;">@koinexindia</sub> <span style="float: right;font-size:1.5rem;"><i class="fas fa-info-circle"></i></span></h1>
+    <hr>
+    <div >
+        <div class="tweet">
+            <img src="https://pbs.twimg.com/profile_images/893388168795271168/-aT7tvnI_normal.jpg" alt="">
+        </div>
+        <div class="tweet">
+            <p><span style="font-weight: bold;">Koinex<br></span>@koinexindia<span></span></p>
+        </div>
+        <div class="twitter-logo">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="tweet-content">
+          <p>{{tweet.content}}</p>
+        </div>
+    </div>
+  </div> 
+</div>

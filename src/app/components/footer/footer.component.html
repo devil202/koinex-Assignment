@@ -1,0 +1,136 @@
+<div *ngIf="desktop" class="footer">
+  <div class="container-fluid flex-container">
+    <div class="footer-content">
+      <h1>COMPANY</h1>
+      <p>ABOUT</p>
+      <p>SUPPORT TICKET (10 AM TO 8 PM)</p>
+      <p>CAREERS</p>
+      <p>FAQ</p>
+    </div>
+    <div class="footer-content">
+      <h1>INFORMATION</h1>
+      <p>TRADE RULES</p>
+      <p>FEES</p>
+      <p>REFUND POLICY</p>
+      <p>TERMS AND CONDITIONS</p>
+      <p>PRIVACY POLICY</p>
+      <p>AML POLICY</p>
+    </div>
+    <div class="footer-content">
+      <h1>RESOURCES</h1>
+      <p>KOINEX CRUNCH</p>
+      <p>MARKET ANALYSIS</p>
+      <p>TICKER API</p>
+      <p>STOP LIMIT</p>
+    </div>
+    <div class="footer-content">
+      <h1>MARKETS</h1>
+      <p>BITCOIN</p>
+      <p>ETHEREUM</p>
+      <p>RIPPLE</p>
+      <p>BITCOIN CASH</p>
+    </div>
+    <div class="footer-content">
+      <h1>Address</h1>
+      <p>KOINEX,</p>
+      <p>Unit No. 614, 615, 616,</p>
+      <p>6th Floor, B Wing, Shah & Nahar Industrial Estate,</p>
+      <p>Dr E Moses Rd, Lower Parel</p>
+      <P>Mumbai, Maharashtra</P>
+      <P>400013</P>
+    </div>
+    <div class="footer-content">
+      <h1>MADE IN INDIA <br>FOR THE LOVE OF BLOCKCHAIN</h1>
+      <h1>Download Android APP</h1>
+      <h5>© 2018 DISCIDIUM INTERNET LABS PVT. LTD.</h5> <h5>ALL RIGHTS RESERVED</h5><h5> Disclaimer: Trading in cryptocurrencies are subject to market,technical and legal risks. The prices fluctuate based on local demand and supply.</h5>
+    </div>
+  </div>
+  <div class="container-fluid center" >
+    <hr>
+    <div class="social" align="center">
+      <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-medium-m"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="mobile" class="footer">
+  <div class="container-fluid flex-container">
+    <div class="footer-content">
+        <h1 (click)="show('company')">COMPANY <span class="caret" style="float: right;"></span></h1>
+        <div *ngIf="dropdown.company" class="drop">
+          <hr>
+          <p>ABOUT</p>
+          <p>CAREERS</p>
+          <p>FAQ</p>
+        </div>
+    </div>
+    <div class="footer-content">
+        <h1 (click)="show('info')">INFORMATION <span class="caret" style="float: right;"></span></h1>
+        <div *ngIf="dropdown.info" class="drop">
+          <hr>
+          <p>TRADE RULES</p>
+          <p>FEES</p>
+          <p>REFUND POLICY</p>
+          <p>TERMS AND CONDITIONS</p>
+          <p>PRIVACY POLICY</p>
+          <p>AML POLICY</p>
+        </div>
+    </div>
+    <div class="footer-content">
+        <h1 (click)="show('resource')">RESOURCES <span class="caret" style="float: right;"></span></h1>
+        <div *ngIf="dropdown.resource" class="drop">
+          <hr>
+          <p>KOINEX CRUNCH</p>
+          <p>MARKET ANALYSIS</p>
+          <p>TICKER API</p>
+          <p>STOP LIMIT</p>
+        </div>
+    </div>
+    <div class="footer-content">
+        <h1 (click)="show('market')">MARKET <span class="caret" style="float: right;"></span></h1>
+        <div *ngIf="dropdown.market" class="drop">
+          <hr>
+          <p>BITCOIN</p>
+          <p>ETHEREUM</p>
+          <p>RIPPLE</p>
+          <p>BITCOIN CASH</p>
+        </div>
+    </div>
+    <div class="footer-content">
+      <h1>Download Android APP</h1>
+      <h1>Address</h1>
+      <p>KOINEX,
+      Unit No. 614, 615, 616, 6th Floor, B Wing, Shah & Nahar Industrial Estate,
+      Dr E Moses Rd, Lower Parel</p>
+      <P>Mumbai, Maharashtra</P>
+      <P>400013</P>
+    </div>
+    <div class="social" align="center">
+      <div class="icon">
+        <i class="fab fa-facebook-f"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-twitter"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-medium-m"></i>
+      </div>
+      <div class="icon">
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+    <div class="footer-content">
+      <h1>MADE IN INDIA<br>FOR THE LOVE OF BLOCKCHAIN</h1>
+    </div>
+  </div>
+</div>

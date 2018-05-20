@@ -1,0 +1,79 @@
+.featured-heading{
+    padding:10px;
+    background-color:#0c6eb5;
+    text-align: center;
+}
+.featured,.announcement,.investor,.tweets{
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+.featured-content,.announcement-content,.investor-content{
+    color: black;
+    padding: 3%;
+}
+.announcement-content> div>h1{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.announcement-content> div>p{
+    font-size: 1rem;
+    font-weight:lighter;
+}
+.featured-content img{
+    margin-right: 10px;
+}
+.tweets{
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px #ddd; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:gray; 
+}
+
+.tweet{
+    float: left;
+    width:15%;
+}
+.twitter-logo{
+    float: right;
+    color: #ddd;
+}
+.tweet-content{
+    padding-left: 15%;
+    padding-right: 8%;
+    word-wrap: break-word;
+    float: none;
+    padding-top:50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .featured-heading{
+        text-align: left;
+        padding:1px;
+    }
+    .investor{
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .featured-heading{
+        text-align: center;
+        padding:5px;
+    }
+    .tweets{
+        display: none;
+    }
+}

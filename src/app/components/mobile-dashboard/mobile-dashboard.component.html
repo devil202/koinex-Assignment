@@ -1,0 +1,105 @@
+<div class="view">
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+      <a href="#inr" data-toggle='tab'>INR</a>
+    </li>
+    <li role="presentation">
+      <a href="#btc" data-toggle='tab'>BTC</a>
+    </li>
+    <li role="presentation">
+      <a href="#eth" data-toggle='tab'>ETH</a>
+    </li>
+    <li role="presentation">
+      <a href="#xrp" data-toggle='tab'>XRP</a>
+    </li>
+    <li class="right">
+      <div class="form-group has-feedback" align="right">
+        <label class="sr-only">Search</label>
+        <input type="text" class="form-control" placeholder="Search Koin" />
+        <i class="glyphicon glyphicon-search form-control-feedback"></i>
+      </div>
+    </li>
+  </ul>
+  <div class="tab-content ">
+    <div id="inr" class="tab-pane fade in active table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><i class="fas fa-chart-pie"></i></th>
+            <th colspan="2">MARKET-INR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
+            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
+            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
+            <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
+            <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="btc" class="tab-pane fade table-responsive">
+      <table class="table table-stripped">
+        <thead>
+          <tr>
+            <th><i class="fas fa-chart-pie"></i></th>
+            <th colspan="2">MARKET-BTC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
+            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
+            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
+            <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
+            <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="eth" class="tab-pane fade table-responsive">
+      <table class="table table-stripped">
+        <thead>
+          <tr>
+            <th><i class="fas fa-chart-pie"></i></th>
+            <th colspan="2">MARKET-ETH</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
+            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
+            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
+            <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
+            <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="xrp" class="tab-pane fade table-responsive">
+      <table class="table table-stripped">
+        <thead>
+          <tr>
+            <th><i class="fas fa-chart-pie"></i></th>
+            <th colspan="2">MARKET-XRP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datum of data">
+            <td ><img src="{{datum.img}}" alt="" height="20" width="20" ></td>
+            <td colspan="2" >{{datum.name}}<br>Vol(24Hrs): {{datum.volume}}</td>
+            <td>{{datum.price}}<br><span *ngIf="datum.change > 0" class="green">{{datum.change}}%</span>
+            <span *ngIf="datum.change < 0" class="red">{{datum.change}}%</span>
+            <span *ngIf="datum.change == 0">{{datum.change}}%</span></td>
+            <td style="color:#0c6eb5;font-weight: bolder">TRADE</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

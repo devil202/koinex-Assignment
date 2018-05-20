@@ -1,0 +1,49 @@
+tr >th{
+    color: #0c6eb5;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+tr{
+    text-align: center;
+}
+
+ul > li > a {
+    color:#666;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+ul > li > a:focus {
+    color:#0c6eb5;
+}
+.view{
+    padding: 10px;
+}
+.right{
+    max-width: 250px;
+    max-height: 40px;
+    float: right;
+    background: white;
+}
+ li:nth-child(4){
+     border-right:1px solid #ddd;
+ }
+table>thead>tr>th:first-child{
+    padding-right:15%;
+}
+table>tbody>tr>td:first-child{
+    text-align: left;
+    padding-left: 15px;
+} 
+.tab-content > div > table > tbody >tr >td{
+    font-family: 'Montserrat', sans-serif;
+}
+.tab-content > div > table > tbody >tr:hover{
+    background-color:#f2f9ff; 
+}
+.green{
+    color:green;
+}
+.red{
+    color:red;
+}
